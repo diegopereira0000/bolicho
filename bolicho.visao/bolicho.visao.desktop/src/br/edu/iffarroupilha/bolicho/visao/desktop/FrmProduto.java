@@ -22,7 +22,10 @@ import br.edu.iffarroupilha.bolicho.modelo.Produto;
  */
 public class FrmProduto  extends JFrame {
 
+	private Bolicho principal;
+	
 	public FrmProduto(Bolicho principal) {
+		this.principal=principal;
 		setTitle("Bolicho -> Produto");
 		setSize(320,240);
 		setLocationRelativeTo(principal);
@@ -33,12 +36,12 @@ public class FrmProduto  extends JFrame {
 	private void desenhaComponentes() {
 		// cria os componentes para a tela
 		JLabel jblDescricao = new JLabel("Descricao:");
-		JLabel jblPreco = new JLabel("Preço:");
-		JTextField jtfDescricao = new JTextField(30);
-		JTextField jtfPreco = new JTextField(30);
+		JLabel jblPreco = new JLabel("Preço:       ");
+		JTextField jtfDescricao = new JTextField(20);
+		JTextField jtfPreco = new JTextField(20);
 		JButton btnGravar = new JButton("Gravar");
 		
-		setLayout(new FlowLayout());
+		setLayout(new FlowLayout(FlowLayout.LEFT));
 		
 		btnGravar.addActionListener(new ActionListener() {
 
@@ -59,7 +62,7 @@ public class FrmProduto  extends JFrame {
 					// realiza a gravacao
 					controle.gravar(c);
 					JOptionPane.showMessageDialog(null, "Gravado!");
-				} else {
+				}  else {
 					JOptionPane.showMessageDialog(null, erro, "Validação",
 							JOptionPane.WARNING_MESSAGE);
 				}

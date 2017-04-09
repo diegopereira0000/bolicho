@@ -15,7 +15,7 @@ public class Produto {
 	private double preco;
 
 	public int getIdProduto() {
-		return idProduto;
+		 return idProduto;
 	}
 
 	public void setIdProduto(int idProduto) {

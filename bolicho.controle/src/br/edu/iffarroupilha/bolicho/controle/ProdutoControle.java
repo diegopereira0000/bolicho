@@ -19,7 +19,7 @@ public class ProdutoControle extends AControle {
 	public String validarProduto(Produto p) {
 		if (p != null) {
 			if (p.getPreco() == 0) {
-				return "Informe o preco";
+				 return "Informe o preco";
 			} else if (p.getDescricao() == null || p.getDescricao().isEmpty()) {
 				return "Por favor, informe a descrição do produto";
 			}

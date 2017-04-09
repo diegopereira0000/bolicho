@@ -37,8 +37,8 @@ public class FrmCliente extends JFrame {
 	private void desenhaComponentes() {
 		JLabel lblCPF = new JLabel("CPF:");
 		JLabel lblNome = new JLabel("Nome:");
-		final JTextField txtCPF = new JTextField(30);
-		final JTextField txtNome = new JTextField(30);
+		final JTextField txtCPF = new JTextField(25);
+		final JTextField txtNome = new JTextField(25);
 		JButton btnGravar = new JButton("Gravar");
 
 		setLayout(new FlowLayout(FlowLayout.LEFT));
